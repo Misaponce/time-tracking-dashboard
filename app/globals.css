@@ -27,7 +27,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* General Style */
@@ -37,5 +37,16 @@ body, html {
   color: white;
 }
 
+/* Footer Style */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* Main Card Style */
+
+.main-card {
+  background-color: var(--Dark-blue);
+}
+
+.user-card {
+  background-color: var(--Blue);
+}
