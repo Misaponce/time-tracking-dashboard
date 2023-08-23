@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font */
+@font-face {
+  font-family: 'RubikRegular';
+  src: 
+    url('../assets/fonts/rubik-regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/rubik-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RubikLight';
+  src: 
+    url('../assets/fonts/rubik-light-webfont.woff2') format('woff2'),
+    url('../assets/fonts/rubik-light-webfont.woff') format('woff');
+}
+
 :root {
     /* Colors */
 
@@ -35,11 +50,12 @@
 body, html {
   background-color: var(--Very-dark-blue);
   color: white;
+  font-family: 'RubikLight', sans-serif !important;
 }
 
 /* Footer Style */
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: var(--Soft-blue); }
 
 /* Main Card Style */
 
