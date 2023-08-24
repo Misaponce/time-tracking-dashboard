@@ -23,7 +23,7 @@
   /* Primary */
 
   --Blue: hsl(246, 80%, 60%);
-  --Light-red: hsl(15, 100%, 70%); /* work */
+  --Light-orange: hsl(15, 100%, 70%); /* work */
   --Soft-blue: hsl(195, 74%, 62%); /* play */
   --Light-red: hsl(348, 100%, 68%); /* study */
   --Lime-green: hsl(145, 58%, 55%); /* exercise */
@@ -65,4 +65,34 @@ body, html {
 
 .user-card {
   background-color: var(--Blue);
+}
+
+/* Activity Card Style */
+
+.activity-display {
+  background-color: var(--Dark-blue);
+}
+
+.work-activity {
+  background-color: var(--Light-orange);
+}
+
+.play-activity {
+  background-color: var(--Soft-blue);
+}
+
+.study-activity {
+  background-color: var(--Light-red);
+}
+
+.exercise-activity {
+  background-color: var(--Lime-green);
+}
+
+.social-activity {
+  background-color: var(--Violet);
+}
+
+.self-care-activity {
+  background-color: var(--Soft-orange);
 }
