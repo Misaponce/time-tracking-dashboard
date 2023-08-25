@@ -12,19 +12,19 @@ const ActivityCard = () => {
                         key={index} 
                         className={`${activity.title.toLocaleLowerCase().replace(' ', '-')}-activity 
                         rounded-xl 
-                        pt-10
+                        pt-8
                         flex flex-col items-end justify-center`
                         }>
-                        
-                        <div className='activity-display flex justify-center items-center 
-                                        rounded-xl h-full w-full p-6'>
-                            <div className='flex-1 flex flex-col ps-2'>
-                                <span className='text-base'>{activity.title}</span>
-                                <span className='text-4xl mt-4'>{`${activity.timeframes.weekly.current}hrs`}</span>
-                            </div>
-                            <div className='flex-1 flex flex-col text-right pe-2 py-2'>
+ 
+                        <div className='activity-display flex flex-col 
+                                        rounded-xl h-full w-full p-8'>
+                            <div className='flex-1 flex justify-between'>
+                                <span className='text-xl'>{activity.title}</span>
                                 <span className='text-lg'>...</span>
-                                <span className='text-xl sm:text-base mt-4'>{`Last Week - ${activity.timeframes.weekly.previous}hrs`}</span>
+                            </div>
+                            <div className='flex-1 flex justify-between items-end sm:items-start sm:flex-col mt-4'>
+                                <span className='text-4xl '>{`${activity.timeframes.weekly.current}hrs`}</span>
+                                <span className='text-xl sm:text-base pb-2'>{`Last Week - ${activity.timeframes.weekly.previous}hrs`}</span>
                             </div>
                         </div>
                     </div>
