@@ -1,13 +1,13 @@
 import React from 'react'
-// importing the json file with the activity data
-import activities from '../activities.json';
 
-const ActivityCard = () => {
+import { ActivityCardProps } from '@/types';
+
+const ActivityCard = ({ activityData, selectedTimeframe }:ActivityCardProps) => {
+    console.log(selectedTimeframe);
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-full'>
-        {/* card 1 */}
-        {activities.map((activity, index) => {
+        {activityData.map((activity, index) => {
             return  <div 
                         key={index} 
                         className={`${activity.title.toLocaleLowerCase().replace(' ', '-')}-activity 
@@ -23,8 +23,8 @@ const ActivityCard = () => {
                                 <span className='text-lg'>...</span>
                             </div>
                             <div className='flex-1 flex justify-between items-end sm:items-start sm:flex-col mt-4'>
-                                <span className='text-4xl '>{`${activity.timeframes.weekly.current}hrs`}</span>
-                                <span className='text-xl sm:text-base pb-2'>{`Last Week - ${activity.timeframes.weekly.previous}hrs`}</span>
+                                <span className='text-4xl '>{`${activity.timeframes[selectedTimeframe].current}hrs`}</span>
+                                <span className='text-xl sm:text-base pb-2'>{`Last ${selectedTimeframe.charAt(0).toUpperCase() + selectedTimeframe.slice(1)} - ${activity.timeframes[selectedTimeframe].previous}hrs`}</span>
                             </div>
                         </div>
                     </div>

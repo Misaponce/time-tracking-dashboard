@@ -15,20 +15,29 @@ export interface UserCardProps {
     username: string;
 }
 
-// export interface ActivityProps {
-//     title: string;
-//     timeframe: {
-//         daily: {
-//             current: number;
-//             previous: number;
-//         };
-//         weakly: {
-//             current: number;
-//             previous: number;
-//         };
-//         monthly: {
-//             current: number;
-//             previous: number;
-//         };
-//     };
-// }
+export interface ActivityCardProps {
+    activityData: Array<{
+        title: string;
+        timeframes: {
+            daily: {
+                current: number;
+                previous: number;
+            };
+            weekly: {
+                current: number;
+                previous: number;
+            };
+            monthly: {
+                current: number;
+                previous: number;
+            };
+            //adding an index type so selectedtimeframe can be used
+            [key: string]: {
+                current: number;
+                previous: number;
+            };
+        };
+    }>;
+
+    selectedTimeframe: string;
+}

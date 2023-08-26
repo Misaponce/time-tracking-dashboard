@@ -18,21 +18,21 @@ const MainCard = ({ handleClick }: MainCardProps) => {
               <CustomButton 
                 text='Daily'
                 name='daily'
-                onClick={() => {handleClick('daily clicked')}}
+                onClick={() => {handleClick('daily')}}
               />
             </li>
             <li className='sm:w-4/5 sm:ms-6'>
               <CustomButton 
                 text='Weekly'
                 name='weekly'
-                onClick={() => {handleClick('weekly clicked')}}
+                onClick={() => {handleClick('weekly')}}
               />
             </li>
             <li className='sm:w-4/5 sm:ms-6'>
               <CustomButton 
                 text='Monthly'
                 name='monthly'
-                onClick={() => {handleClick('monthly clicked')}}
+                onClick={() => {handleClick('monthly')}}
               />
             </li>
         </ul>
