@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 
 export interface CustomButtonProps {
-    name: string;
     text: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
 }

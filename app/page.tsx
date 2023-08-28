@@ -14,6 +14,8 @@ export default function Home() {
     // Filtering data based on option selected
     const updatedActivityData = activities.map((activity) => {
       if (name === 'daily') {
+        //using spread operator to create a copy of activiy object
+        //but updating timeframe to the selected
         return {...activity, timeframe: activity.timeframes.daily};
       } else if (name === 'weekly') {
         return {...activity, timeframe: activity.timeframes.weekly};
