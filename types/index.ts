@@ -3,6 +3,7 @@ import { StaticImageData } from "next/image";
 export interface CustomButtonProps {
     text: string;
     onClick: React.MouseEventHandler<HTMLButtonElement>;
+    isActive: boolean;
 }
 
 export interface MainCardProps {
@@ -39,4 +40,9 @@ export interface ActivityCardProps {
     }>;
 
     selectedTimeframe: string;
+}
+
+// Type to map each activity icon card
+export type IconMap = {
+    [key: string]: StaticImageData;
 }

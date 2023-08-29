@@ -28,7 +28,11 @@ export default function Home() {
 
     setActivityData(updatedActivityData)
     setSelectedTimeframe(name);
+
   }
+
+  // To handle selected time frame opacity effect
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between py-24 px-6 sm:p-24">
