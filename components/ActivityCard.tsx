@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const ActivityCard = ({ activityData, selectedTimeframe }:ActivityCardProps) => {
 
+    //Made a map thru all card icons and assign a key value prop.
     const iconMap: IconMap = {
         Work: Icons.IconWork,
         Play: Icons.IconPlay,
@@ -24,13 +25,14 @@ const ActivityCard = ({ activityData, selectedTimeframe }:ActivityCardProps) => 
                         key={index} 
                         className={`${activity.title.toLocaleLowerCase().replace(' ', '-')}-activity 
                         rounded-xl 
-                        flex flex-col items-end justify-end relative z-10`
+                        flex flex-col items-end justify-end relative overflow-hidden`
                         }>
+                        {/* Based on the activity title, run thru iconMap to render the right icon */}
                         <Image src={iconMap[activity.title.replace(' ', '')]} 
                                 alt='Icon-Activity' 
                                 height={80}
                                 width={80}
-                                className='absolute z-0 -top-2'
+                                className='absolute z-0 -top-2 me-4'
                         />
                         <div className='activity-display flex flex-col 
                                         rounded-xl h-3/4 w-full px-8 py-10 relative z-10
@@ -38,7 +40,7 @@ const ActivityCard = ({ activityData, selectedTimeframe }:ActivityCardProps) => 
                             <div className='flex-1 flex justify-between'>
                                 <span className='text-xl'>{activity.title}</span>
                                 <span className='mt-3 cursor-pointer opacity-30 hover:opacity-100'>
-                                    <Image src={Dots} alt='Dots-Info'/>
+                                    <Image src={Dots} alt='Dots-Info' title={`${activity.title} hours tracked`}/>
                                 </span>
                             </div>
                             <div className='flex-1 flex justify-between items-end sm:items-start sm:flex-col mt-4'>
